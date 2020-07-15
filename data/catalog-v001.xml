@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/classification.owl" uri="Out_model.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1590412879605" name="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl" uri="agentrole.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1590412879605" name="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl" uri="collectionentity.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1590412879605" name="duplicate:http://www.ontologydesignpatterns.org/cp/owl/description.owl" uri="Desc_rdf.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1590412879605" name="duplicate:http://www.ontologydesignpatterns.org/cp/owl/description.owl" uri="description.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1590412879605" name="duplicate:http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3" uri="new_school.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1590412879605" name="duplicate:http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3" uri="linked_KG.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1590412879605" name="duplicate:http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3" uri="old_school.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1590412879605" name="duplicate:http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3" uri="2016105_Q3.owl"/>
+    </group>
+</catalog>

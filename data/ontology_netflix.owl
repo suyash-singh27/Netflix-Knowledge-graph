@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3"
+     xml:base="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#castOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#castOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasActors"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#directorSetOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#directorSetOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDirector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasActors -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasActors">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Cast"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasCast -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasCast">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Movie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#TvShow"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Cast"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#CountryReleaseSet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDirector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDirector">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#DirectorSet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Director"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDirectorSet -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDirectorSet">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Movie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#TvShow"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#DirectorSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDuration -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDuration">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Movie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#TvShow"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Duration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasGenreSet -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasGenreSet">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Movie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#TvShow"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#GenreSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasGenres -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasGenres">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#GenreSet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasRating">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Movie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#TvShow"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Rating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasReleaseYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasReleaseYear">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Movie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#TvShow"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#ReleaseYear"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#isReleasedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#isReleasedIn">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Movie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#TvShow"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#CountryReleaseSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDescription">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Actor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Director"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Duration"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Genre"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#ReleaseYear"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDescription"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#castOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Cast"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Cast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Cast">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasActors"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Country">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#CountryReleaseSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#CountryReleaseSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#CountryReleaseSet">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasCountry"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Director">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#directorSetOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#DirectorSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#DirectorSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#DirectorSet">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDirector"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Director"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Duration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Duration">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Genre">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#GenreSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#GenreSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#GenreSet">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasGenres"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Genre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Movie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Movie">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDuration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasRating"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Rating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasReleaseYear"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#ReleaseYear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#TvShow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Rating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#ReleaseYear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#ReleaseYear">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasYear"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#TvShow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#TvShow">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasDuration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasRating"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#Rating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#hasReleaseYear"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/suyash-singh/ontologies/2020/3/2016105_Q3#ReleaseYear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
